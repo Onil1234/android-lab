@@ -42,6 +42,16 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intencja, 1);
     }
 
+    @Override
+    protected void onActivityResult(int reqestCode, int resultCode, Intent data) {
 
+        if(reqestCode == 1 && resultCode == RESULT_OK){
+            Bundle extras = data.getExtras();
+            String nowy = (String) extras.get("wpis");
+            target.add(nowy);
+            adapter.notifyDataSetChanged();
+        }
+        super.onActivityResult(reqestCode, resultCode, data);
+    }
 
 }
