@@ -8,24 +8,20 @@ public class Animal implements Serializable {
     private String kolor;
     private float wielkosc;
     private String opis;
-
     public Animal(){}
 
-
-    public Animal(int _id, String gatunek, String kolor, float wielkosc, String opis) {
-        this._id = _id;
+    public Animal(String gatunek, String kolor, float wielkosc, String opis) {
         this.gatunek = gatunek;
         this.kolor = kolor;
         this.wielkosc = wielkosc;
         this.opis = opis;
     }
 
-    public Animal(String string, String string1, float aFloat, String string2) {
-    }
-
     @Override
     public String toString(){
-        return "Zwierzę: [id = " + _id + ", gatunek = " + gatunek + ", kolor = " + kolor + ", wielkosc = " + wielkosc + " ]";
+
+        return "Zwierze: [id=" + _id + ",gatunek = " + gatunek + ", kolor = " + kolor + ", wielkosc = " + wielkosc +"]";
+
     }
 
 
@@ -33,39 +29,23 @@ public class Animal implements Serializable {
         return _id;
     }
 
-    public void set_id(int _id) {
-        this._id = _id;
-    }
-
     public String getGatunek() {
         return gatunek;
-    }
-
-    public void setGatunek(String gatunek) {
-        this.gatunek = gatunek;
     }
 
     public String getKolor() {
         return kolor;
     }
 
-    public void setKolor(String kolor) {
-        this.kolor = kolor;
-    }
-
     public float getWielkosc() {
         return wielkosc;
-    }
-
-    public void setWielkosc(float wielkosc) {
-        this.wielkosc = wielkosc;
     }
 
     public String getOpis() {
         return opis;
     }
 
-    public void setOpis(String opis) {
-        this.opis = opis;
+    public void set_id(int _id) {
+        this._id = _id;
     }
 }
