@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         ListView listview = (ListView) findViewById(R.id.listView);
         this.adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1, this.target);
         listview.setAdapter(this.adapter);
-
+//xvcvxcvcx
     }
 
     @Override
